@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  background: linear-gradient(
+    180deg,
+    #1d1e28 0.12%,
+    #261c2d 94.84%,
+    #261a2d 100%
+  );
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  --Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+
+body {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 700;
+  background-image: url(./images/bg-stars.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/* *************************************************** */
+/* main section */
+/* ******************************************************* */
+.container {
+  /* padding: 0 2.4rem 0 2.4rem; */
+  background-image: url(./images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 26%;
+  background-position: bottom;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 11rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-align: center;
+  letter-spacing: 6.13636px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 7px;
+  line-height: 9px;
+  text-align: center;
+  letter-spacing: 2.95937px;
+  color: #8385a9;
+  margin-top: 1.3rem;
+}
+.days-time {
+}
+/* **************************************************** */
+/* timer */
+/* ********************************************************** */
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.6rem;
+  margin-top: 5.4rem;
+}
+
+:where(.days, .hours, .minutes, .seconds) {
+  background: #343650;
+  border-radius: 4px;
+  width: 7rem;
+  height: 6.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.2);
+  font-size: 7px;
+  line-height: 9px;
+  text-align: center;
+  letter-spacing: 2.95937px;
+  color: #8385a9;
+  row-gap: 2rem;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+      circle at 0 100%,
+      rgb(25, 26, 35) 5px,
+      #2d2f42 0px
+    ),
+    radial-gradient(circle at 100% 100%, rgb(25, 26, 35) 5px, #2d2f42 0px),
+    radial-gradient(circle at 100% 0, rgb(25, 26, 35) 5px, #343650 0px),
+    radial-gradient(circle at 0 0, rgb(25, 26, 35) 5px, #343650 0px);
+  background-position: top left, top right, bottom right, bottom left;
+  backdrop-filter: brightness(1.7);
+  background-size: 51% 50%;
+  background-repeat: no-repeat;
+  height: 6.7rem;
+  width: 7.1rem;
+  border-radius: 0.4rem;
+  font-size: 36px;
+  line-height: 71px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -1.08px;
+
+  color: #fb5e84;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1.9rem;
+}
+
+p {
+  font-size: 7px;
+  line-height: 9px;
+  text-align: center;
+  letter-spacing: 2.95937px;
+  color: #8385a9;
+  text-align: right;
+}
+
+/* ******************************************************* */
+/* footer section */
+/* ******************************************************* */
+
+footer {
+  display: flex;
+  gap: 3.2rem;
+  position: absolute;
+  bottom: 5.2rem;
+}
+
+/* ************************************************************* */
+/* desktop version */
+/* **************************************************************** */
+@media screen and (min-width: 760px) {
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    letter-spacing: 7.5px;
+  }
+  .timer {
+    gap: 5.7rem;
+    margin-top: 10.4rem;
+  }
+  :where(.days, .hours, .minutes, .seconds) {
+    background: #343650;
+    border-radius: 8px;
+    width: 14.8rem;
+    height: 14rem;
+    box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  h3 {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 2.6rem;
+  }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(
+        circle at 0 100%,
+        rgb(25, 26, 35) 8px,
+        #2d2f42 0px
+      ),
+      radial-gradient(circle at 100% 100%, rgb(25, 26, 35) 8px, #2d2f42 0px),
+      radial-gradient(circle at 100% 0, rgb(25, 26, 35) 8px, #343650 0px),
+      radial-gradient(circle at 0 0, rgb(25, 26, 35) 8px, #343650 0px);
+    background-position: top left, top right, bottom right, bottom left;
+    backdrop-filter: brightness(1.7);
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    height: 14rem;
+    width: 14.9rem;
+    border-radius: 0.8rem;
+    font-size: 80px;
+    line-height: 71px;
+    text-align: center;
+    letter-spacing: -2.4px;
+    color: #fb5e84;
+  }
+}
